@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
          * Returns a new instance of this fragment for the given section
          * number.
          */
+        int index;
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
@@ -139,9 +140,28 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
+        public void onCreate(Bundle savedInstanceState){
+            super.onCreate(savedInstanceState);
+            index = getArguments() != null ? getArguments().getInt(ARG_SECTION_NUMBER) : 0;
+        }
+
+        @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView;
+            switch (index) {
+                case 1:
+                    rootView = inflater.inflate(R.layout.fragment_main,container,false);
+                    break;
+                case 2:
+                    rootView = inflater.inflate(R.layout.fragment_math,container,false);
+                    break;
+                default:
+                    rootView = inflater.inflate(R.layout.fragment_default,container,false);
+                    break;
+            }
+
+
             return rootView;
         }
     }
