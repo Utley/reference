@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.text.Html;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -155,6 +156,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 2:
                     rootView = inflater.inflate(R.layout.fragment_math,container,false);
+                    TextView t = (TextView) rootView.findViewById(R.id.test);
+                    t.setText(Html.fromHtml("<h1>Hello</h1>"));
+                    
+
                     break;
                 default:
                     rootView = inflater.inflate(R.layout.fragment_default,container,false);
@@ -165,5 +170,6 @@ public class MainActivity extends AppCompatActivity {
             return rootView;
         }
     }
+
 
 }

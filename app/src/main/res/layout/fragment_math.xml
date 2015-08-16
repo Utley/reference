@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Math stuff"
-        android:id="@+id/textView"
+        android:id="@+id/test"
         android:textAlignment="center"
         android:gravity="center_horizontal" />
 </LinearLayout>

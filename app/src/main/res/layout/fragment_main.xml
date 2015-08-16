@@ -4,9 +4,59 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity$PlaceholderFragment">
+    tools:context=".MainActivity$PlaceholderFragment"
+    android:backgroundTint="@android:color/darker_gray"
+    android:background="@android:drawable/screen_background_dark"
+    android:clickable="false">
 
-    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:text="testing" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formulas"
+            android:id="@+id/button"
+            android:textSize="30sp"
+            android:padding="20dp"
+            style="@style/AppTheme"
+            android:background="#5d5da2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solver"
+            android:id="@+id/button2"
+            android:textSize="30sp"
+            android:padding="20dp"
+            android:background="#a24e55"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/button"
+            android:typeface="sans"
+            android:layout_below="@+id/button"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignRight="@+id/button"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Textbook"
+            android:id="@+id/button3"
+            android:textSize="30sp"
+            android:padding="20dp"
+            android:background="#5ea25e"
+            android:layout_alignParentBottom="false"
+            android:layout_alignStart="@+id/button2"
+            android:layout_below="@+id/button2"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
 </RelativeLayout>
